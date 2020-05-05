@@ -179,6 +179,30 @@ DB_PASSWORD=SecurePassworD
 
 ## Running a test
 
+> Before testing, open routes/web.php. Comment out:
+```
+Auth::routes(['register' => false]);//Register route deactivated
+
+```
+
+Simply, enter '//' in front
+```
+//Auth::routes(['register' => false]);//Register route deactivated
+```
+
+Now, uncomment:
+```
+//Auth::routes();
+```
+
+Simply remove '//' in front of the snippet to get.
+
+```
+Auth::routes();
+```
+
+> This will let you create a new account and be able to login. When you're done. reverse those changes. What this does is that, no one else will be able to register. So only existing login details will have access to the administration page.
+
 > Development or local server:
 To view a list of cars
 
